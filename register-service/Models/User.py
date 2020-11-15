@@ -1,5 +1,5 @@
 from sqlalchemy import Column, String, Date, Integer, Numeric
-
+import json
 from .manger import Base
 
 
@@ -12,5 +12,8 @@ class User(Base):
     def __init__(self, name):
         self.name = name
 
-    def to_string(self):
-        return f'name : {self.name}  id : {self.id}'
+    def to_json_string(self):
+        return json.dumps({
+            "id": self.id,
+            "name": self.name
+        })
