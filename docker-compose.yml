@@ -1,0 +1,13 @@
+version: "3"
+services:
+  rabbitmq:
+    image: rabbitmq:3.8.9-alpine
+    container_name: rabbitmq
+    environment:
+      RABBITMQ_ERLANG_COOKIE: 'pub-sub example'
+    volumes:
+      - ./db-data:/var/lib/rabbitmq
+    ports:
+      - 5672:5672
+      - 15672:15672
+      - 25672:25672
