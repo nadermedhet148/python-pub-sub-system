@@ -11,3 +11,9 @@ services:
       - 5672:5672
       - 15672:15672
       - 25672:25672
+
+  payment-service:
+    image: python-register-service:latest
+    container_name: register-servic
+    ports:
+    - 5000:5000
