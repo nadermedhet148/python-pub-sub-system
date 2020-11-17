@@ -11,9 +11,18 @@ services:
       - 5672:5672
       - 15672:15672
       - 25672:25672
-
-  payment-service:
+  register-service:
     image: python-register-service:latest
-    container_name: register-servic
+    container_name: register-service
     ports:
     - 5000:5000
+  profile-service:
+    image: python-profile-service:latest
+    container_name: profile-service
+    ports:
+    - 5100:5000
+  address-book-service:
+    image: python-address-book-service:latest
+    container_name: address-book-service
+    ports:
+    - 5200:5000
