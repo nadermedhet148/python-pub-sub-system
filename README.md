@@ -1,4 +1,4 @@
-# DefinitionDefinition
+# Definition
 
 Pub/sub is shorthand for publish/subscribe messaging, an asynchronous communication method in which messages are exchanged between applications without knowing the identity of the sender or recipient.
 
